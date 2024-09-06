@@ -1,0 +1,225 @@
+/* Importar fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+
+/* Estilo general */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Usar Roboto como fuente predeterminada */
+    margin: 0;
+    padding: 0;
+    background-color: white !important; /* Cambia el color de fondo de toda la página a blanco */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ffffff; /* Asegura que todo el texto del cuerpo sea negro */
+    font-size: 1.4rem; /* Aumenta el tamaño general de la fuente */
+    padding-top: 70px; /* Espacio para que el contenido no se oculte detrás del navbar */
+}
+
+nav .navbar-brand {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/*FUNCIONA*/
+nav .navbar-nav .nav-item {
+    margin: 0 10px; /*SEPARACION ENTRE LAS OPCIONES DEL NAVBAR*/
+}
+/*FUNCIONA*/
+nav .navbar-nav .nav-link {
+    font-size: 1.5rem; /* Aumenta tamaño LETRAS OPCIONES DEL NAVBAR */
+}
+/*FUNCIONA*/
+nav .navbar-nav .nav-link:hover {
+    color: #a72374; /* COLOR OPCIONES DEL NAVBAR*/
+}   
+
+section {
+    margin: 10px 0;
+    flex: 1;
+    font-size: 1.4rem; /* Aumenta el tamaño de la letra en las secciones */
+    
+}
+
+#hero h1 {
+    font-family: 'Poppins', Arial, sans-serif; /* Usar Poppins para los títulos */
+    font-size: 3em; /* Aumenta el tamaño del título */
+    margin-bottom: 10px;
+    text-align: center; /* Mantén el título centrado */
+    color: #000; /* Asegura que el título sea negro */
+}
+
+#hero img {
+    max-width: 60%;
+    height: auto;
+}
+
+/* Estilo para el carrusel en la sección hero */
+#hero .carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {    
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo común para las secciones Inicio, Sobre mí, Mis propuestas, y Contacto */
+section.common-style {
+    background: rgba(255, 255, 255, 1); /* Cambiar color de las secciones */
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: #000000; /* Esto cambia solo el color de los titulos */
+    
+    /* Alineación y espaciado del texto */
+    text-align: left; /* Alinea el texto a la izquierda pero justificado */
+    line-height: 1.6; /* Aumenta la separación entre las líneas */
+    margin-bottom: 10px;
+    font-size: 1.6rem; /* Aumenta el tamaño de letra de los contenidos */
+}
+
+/*FUNCIONA*/
+/* Estilo para los H2*/
+section.common-style h2 {
+    font-family: 'Poppins', Arial, sans-serif; /* Usar Poppins para los títulos */
+    font-size: 3rem; /* Aumenta el tamaño de los títulos */
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center; /* Mantén los SUB-títulos centrados */
+}
+
+/* FUNCIONA */ 
+/*COLOR TEXTOS Y MAS*/
+/* Estilo para los párrafos y listas dentro de las secciones */
+section.common-style p, section.common-style ul {
+    font-family: 'Roboto', Arial, sans-serif; /* Usar Roboto para el contenido */
+    font-size: 1.9rem; /* Aumenta el tamaño de letra */
+    line-height: 1.2; /* Ajusta la separación entre líneas , FUNCIONA*/
+    margin-bottom: 10px;
+    color: #000000; /*FUNCIONA,CAMBIA EL COLOR DE LOS TEXTOS*/
+    text-align: left; /* Funciona, Alinea el texto del contenido a la izquierda */
+}
+
+/*FUNCIONA*/
+/* ESTOS SON ESTILOS DEL FOOTER */
+p {
+    font-size: 30px; /* Tamaño ligeramente más grande */
+    color: #ffffff; /* FUNCIONA, BLANCO */
+    line-height: 1; /* ESPACIO VERTICAL HACIA ARRIBA Y HACIA ABAJO */
+}
+
+/*FUNCIONA*/
+#logo-section {
+    padding: 1px 0; /*ALTURA HACIA ARRIBA Y ABAJO DEL PRIMER LOGO DE LA PAGINA*/
+    margin-bottom: -15;
+}
+
+#logo-section .container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#logo-section img.logo-image {
+    height: 600px;
+    width: auto;
+    margin-bottom: -60px;
+    max-width: 100%; /* Asegura que el logo no exceda el ancho del contenedor */
+}
+
+/* Ajustes para pantallas pequeñas */  
+@media (max-width: 768px) {
+    #logo-section img.logo-image {
+        height: auto; /* Mantiene la altura automática */
+        max-width: 90%; /* Asegura que el logo no ocupe todo el ancho en pantallas pequeñas */
+    }
+}
+
+/* FUNCIONA */
+#hero {
+    padding-top: 0px;
+    margin-top: 0px;  /*MUEVE EL CARRUSEL HACIA ARRIBA O HACIA ABAJO*/
+}
+
+/* Estilo para los elementos de la lista en "Mis propuestas" */
+#mis-propuestas ul li {
+    margin-bottom: 20px; /* Ajusta este valor para controlar la separación entre propuestas */
+    font-size: 1.9rem; /* Aumenta el tamaño de las propuestas */
+}
+
+/* Estilo para el navbar transparente al hacer scroll */
+nav.navbar {
+    position: fixed; /* Fija el navbar en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que el navbar ocupe todo el ancho */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo inicial semitransparente */
+    transition: background-color 0.3s ease; /* Transición suave del color */
+    z-index: 1000; /* Asegura que el navbar esté por encima del contenido */
+}
+
+/* Al hacer scroll */
+nav.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo 50% transparente al hacer scroll */
+}
+
+/*SECCION NUEVA*/
+/* Sección de contáctame */
+#contacto {
+    background-color: white; /* Fondo claro para destacar la sección */
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+#contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.8rem;
+    color: #000000; /*color de la letra bien negro*/
+    margin-bottom: 30px;
+}
+
+/* Estilo para los iconos de redes sociales y el icono de correo */
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los iconos */
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons li a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #333;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 2rem;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    transition: background-color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    background-color: #a72374; /* Color de hover para los iconos */
+}
+
+
+
